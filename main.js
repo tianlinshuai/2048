@@ -123,9 +123,6 @@ function generateOneNumber(){
 
 	return true;
 }
-
-
-
 $(document).keydown( function( event ){
 	event.preventDefault();
 	switch( event.keyCode ){
@@ -367,7 +364,3 @@ function moveDown(){
         setTimeout("updateBoardView()",200);
         return true;
     }
-
-   
-
-
