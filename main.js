@@ -11,23 +11,7 @@ $(document).ready(function(){
     newgame();
 });
 
-function prepareForMobile(){
 
-    if( documentWidth > 500 ){
-        gridContainerWidth = 500;
-        cellSpace = 20;
-        cellSideLength = 100;
-    }
-
-    $('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
-    $('#grid-container').css('height',gridContainerWidth - 2*cellSpace);
-    $('#grid-container').css('padding', cellSpace);
-    $('#grid-container').css('border-radius',0.02*gridContainerWidth);
-
-    $('.grid-cell').css('width',cellSideLength);
-    $('.grid-cell').css('height',cellSideLength);
-    $('.grid-cell').css('border-radius',0.02*cellSideLength);
-}
 
 function newgame(){
     //初始化棋盘格
@@ -155,6 +139,23 @@ $(document).keydown( function( event ){
         break;
     }
 });
+function prepareForMobile(){
+
+    if( documentWidth > 500 ){
+        gridContainerWidth = 500;
+        cellSpace = 20;
+        cellSideLength = 100;
+    }
+
+    $('#grid-container').css('width',gridContainerWidth - 2*cellSpace);
+    $('#grid-container').css('height',gridContainerWidth - 2*cellSpace);
+    $('#grid-container').css('padding', cellSpace);
+    $('#grid-container').css('border-radius',0.02*gridContainerWidth);
+
+    $('.grid-cell').css('width',cellSideLength);
+    $('.grid-cell').css('height',cellSideLength);
+    $('.grid-cell').css('border-radius',0.02*cellSideLength);
+}
 document.addEventListener('touchstart',function(event){
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
